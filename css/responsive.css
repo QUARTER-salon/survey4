@@ -1,0 +1,90 @@
+/* responsive.css */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header-text {
+        font-size: 0.9rem;
+    }
+    
+    #survey-nav a {
+        font-size: 0.8rem;
+        padding: 12px 5px;
+    }
+    
+    .question-card {
+        padding: 15px;
+    }
+    
+    .question-card h2 {
+        font-size: 1.1rem;
+    }
+    
+    .option label {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .stars label {
+        font-size: 30px;
+    }
+    
+    .submit-container {
+        margin: 30px 0;
+    }
+    
+    #submit-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .thank-you-screen h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    #survey-nav a {
+        font-size: 0.7rem;
+        padding: 10px 2px;
+    }
+    
+    .option label:before {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+    
+    .option input[type="radio"]:checked + label:before,
+    .option input[type="checkbox"]:checked + label:before {
+        font-size: 0.7rem;
+        line-height: 16px;
+    }
+    
+    .stars label {
+        font-size: 25px;
+        margin: 0 3px;
+    }
+    
+    .rating-value {
+        font-size: 20px;
+    }
+    
+    #submit-button {
+        width: 100%;
+    }
+    
+    .review-button,
+    .copy-button {
+        width: 100%;
+    }
+}
