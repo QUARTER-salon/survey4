@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUARTERアンケート</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/quarter-logo.png" alt="QUARTER">
+            </div>
+            <h1>サービスアンケート</h1>
+            <p class="header-text">ご利用いただきありがとうございます。<br>サービス向上のため、ご意見をお聞かせください。</p>
+        </header>
+
+        <nav id="survey-nav">
+            <ul>
+                <li><a href="#store-section" class="active">店舗</a></li>
+                <li><a href="#rating-section">評価</a></li>
+                <li><a href="#info-section">情報</a></li>
+                <li><a href="#service-section">サービス</a></li>
+                <li><a href="#feedback-section">感想</a></li>
+            </ul>
+        </nav>
+
+        <form id="survey-form">
+            <!-- 店舗セクション -->
+            <section id="store-section" class="survey-section">
+                <div class="question-card" id="Q1">
+                    <h2>ご来店店舗 <span class="required">必須</span></h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="store1" name="store" value="QUARTER" required>
+                            <label for="store1">QUARTER</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="store2" name="store" value="QUARTER RESORT">
+                            <label for="store2">QUARTER RESORT</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="store3" name="store" value="QUARTER SEASONS">
+                            <label for="store3">QUARTER SEASONS</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="store4" name="store" value="LINK">
+                            <label for="store4">LINK</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="store5" name="store" value="iL">
+                            <label for="store5">iL</label>
+                        </div>
+                    </div>
+                    <div class="error-message" id="store-error">店舗を選択してください</div>
+                </div>
+            </section>
+
+            <!-- 評価セクション -->
+            <section id="rating-section" class="survey-section">
+                <div class="question-card" id="Q2">
+                    <h2>総合評価 <span class="required">必須</span></h2>
+                    <div class="star-rating">
+                        <div class="stars">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="5点">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4点">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3点">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2点">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1点">★</label>
+                        </div>
+                        <div class="rating-value" id="rating-value">0</div>
+                    </div>
+                    <div class="error-message" id="rating-error">評価を選択してください</div>
+                </div>
+            </section>
+
+            <!-- 情報セクション -->
+            <section id="info-section" class="survey-section">
+                <div class="question-card" id="Q3">
+                    <h2>お名前（ニックネーム可）</h2>
+                    <div class="text-input">
+                        <input type="text" id="name" name="name" placeholder="例: 田中 花子">
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q4">
+                    <h2>ご来店状況</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="new" name="customer_type" value="新規">
+                            <label for="new">初めて（新規）</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="repeat" name="customer_type" value="常連">
+                            <label for="repeat">2回目以降（常連）</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q5">
+                    <h2>性別</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="male" name="gender" value="男性">
+                            <label for="male">男性</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="female" name="gender" value="女性">
+                            <label for="female">女性</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="other" name="gender" value="その他">
+                            <label for="other">その他</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q6">
+                    <h2>年齢</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="age1" name="age" value="10代">
+                            <label for="age1">10代</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="age2" name="age" value="20代">
+                            <label for="age2">20代</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="age3" name="age" value="30代">
+                            <label for="age3">30代</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="age4" name="age" value="40代">
+                            <label for="age4">40代</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="age5" name="age" value="50代">
+                            <label for="age5">50代</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="age6" name="age" value="60代以上">
+                            <label for="age6">60代以上</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- サービスセクション -->
+            <section id="service-section" class="survey-section">
+                <div class="question-card" id="Q7">
+                    <h2>ご利用いただいたサービス（複数選択可）</h2>
+                    <div class="options checkbox-options">
+                        <div class="option">
+                            <input type="checkbox" id="service1" name="services" value="カット">
+                            <label for="service1">カット</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="service2" name="services" value="カラー">
+                            <label for="service2">カラー</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="service3" name="services" value="パーマ">
+                            <label for="service3">パーマ</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="service4" name="services" value="トリートメント">
+                            <label for="service4">トリートメント</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="service5" name="services" value="スタイリング">
+                            <label for="service5">スタイリング</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="service6" name="services" value="その他">
+                            <label for="service6">その他（ネイル・着付け 等）</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q8">
+                    <h2>技術や仕上がりに対する満足度</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="satisfaction1" name="technical_satisfaction" value="非常に満足">
+                            <label for="satisfaction1">非常に満足</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="satisfaction2" name="technical_satisfaction" value="満足">
+                            <label for="satisfaction2">満足</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="satisfaction3" name="technical_satisfaction" value="普通">
+                            <label for="satisfaction3">普通</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="satisfaction4" name="technical_satisfaction" value="不満">
+                            <label for="satisfaction4">不満</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="satisfaction5" name="technical_satisfaction" value="非常に不満">
+                            <label for="satisfaction5">非常に不満</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q9">
+                    <h2>スタッフの対応</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="staff1" name="staff_service" value="非常に良い">
+                            <label for="staff1">非常に良い</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="staff2" name="staff_service" value="良い">
+                            <label for="staff2">良い</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="staff3" name="staff_service" value="普通">
+                            <label for="staff3">普通</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="staff4" name="staff_service" value="悪い">
+                            <label for="staff4">悪い</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="staff5" name="staff_service" value="非常に悪い">
+                            <label for="staff5">非常に悪い</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q10">
+                    <h2>待ち時間</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="wait1" name="waiting_time" value="非常に満足">
+                            <label for="wait1">非常に満足</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="wait2" name="waiting_time" value="満足">
+                            <label for="wait2">満足</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="wait3" name="waiting_time" value="普通">
+                            <label for="wait3">普通</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="wait4" name="waiting_time" value="不満">
+                            <label for="wait4">不満</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="wait5" name="waiting_time" value="非常に不満">
+                            <label for="wait5">非常に不満</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q11">
+                    <h2>店内の清潔感</h2>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="clean1" name="cleanliness" value="非常に清潔">
+                            <label for="clean1">非常に清潔</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="clean2" name="cleanliness" value="清潔">
+                            <label for="clean2">清潔</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="clean3" name="cleanliness" value="普通">
+                            <label for="clean3">普通</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="clean4" name="cleanliness" value="不清潔">
+                            <label for="clean4">不清潔</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="clean5" name="cleanliness" value="非常に不清潔">
+                            <label for="clean5">非常に不清潔</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 感想セクション -->
+            <section id="feedback-section" class="survey-section">
+                <div class="question-card" id="Q12">
+                    <h2>追加してほしいサービスや改善点など</h2>
+                    <div class="text-input">
+                        <textarea id="improvement" name="improvement" placeholder="ご意見をお聞かせください"></textarea>
+                    </div>
+                </div>
+
+                <div class="question-card" id="Q13">
+                    <h2>その他ご感想</h2>
+                    <div class="text-input">
+                        <textarea id="comments" name="comments" placeholder="ご感想をお聞かせください"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <div class="submit-container">
+                <button type="submit" id="submit-button">送信する</button>
+            </div>
+        </form>
+
+        <!-- 送信完了（低評価） -->
+        <div id="thank-you-low" class="thank-you-screen">
+            <h2>ご回答ありがとうございました</h2>
+            <p>貴重なご意見を参考に、より良いサービスを目指します。</p>
+        </div>
+
+        <!-- 送信完了（高評価） -->
+        <div id="thank-you-high" class="thank-you-screen">
+            <h2 id="thank-you-rating">星5ありがとうございます！</h2>
+            <p>いつも当店をご利用いただき、誠にありがとうございます。<br>
+            もしよろしければ、以下のコメントをコピーして「Googleマップ」にご投稿いただけますと大変励みになります。</p>
+            
+            <div class="comment-box">
+                <div id="review-comment" class="review-comment"></div>
+                <button id="copy-button" class="copy-button">コメントをコピー</button>
+            </div>
+            
+            <div class="review-instructions">
+                <p>- ボタンを押すと簡単にコピーできます<br>
+                - 投稿ページが開いたらペーストしていただくだけでOKです</p>
+            </div>
+            
+            <p class="thank-you-message">今後とも皆様に喜んでいただけるよう、スタッフ一同さらに技術を磨いてまいります。<br>
+            どうぞよろしくお願いいたします。</p>
+            
+            <button id="review-button" class="review-button">Googleマップに投稿する</button>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/dynamic-services.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/star-rating.js"></script>
+    <script src="js/scroll-monitor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
